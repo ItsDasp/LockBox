@@ -57,7 +57,6 @@ export const generateSecurePassword = (options: GeneratorOptions): string => {
     if (options.extraChars <= 0) return transformedWord;
 
     const halfExtra = Math.floor(options.extraChars / 2);
-    const restExtra = options.extraChars - halfExtra;
 
     const randomValues = new Uint32Array(options.extraChars);
     window.crypto.getRandomValues(randomValues);
