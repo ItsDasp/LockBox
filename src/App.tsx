@@ -16,8 +16,8 @@ const ROAST_MSGS = [
 ];
 
 const UNDERTALE_LINES = [
-  "Ok.... tienes down...",
-  "selecciona algo, tonto imbecil retardado",
+  "Ok.... >;c",
+  "selecciona algo, tonto imbecil retardado anormal",
 ];
 
 function App() {
@@ -26,7 +26,6 @@ function App() {
   const [shaking, setShaking] = useState(false);
   const [roast, setRoast] = useState<string | null>(null);
   const [cardState, setCardState] = useState<"normal" | "flying" | "hidden" | "returning">("normal");
-  const [undertaleMsg, setUndertaleMsg] = useState<string | null>(null);
   const [undertaleVisible, setUndertaleVisible] = useState(false);
   const [undertaleChar, setUndertaleChar] = useState("");
   const [options, setOptions] = useState<GeneratorOptions>({
@@ -82,7 +81,6 @@ function App() {
   };
 
   const showUndertale = (lineIndex: number) => {
-    setUndertaleMsg(UNDERTALE_LINES[lineIndex]);
     setUndertaleVisible(true);
     setUndertaleChar("");
 
@@ -131,7 +129,6 @@ function App() {
         } else {
           undertaleTimerRef.current = setTimeout(() => {
             setUndertaleVisible(false);
-            setUndertaleMsg(null);
           }, 2500);
         }
       }
